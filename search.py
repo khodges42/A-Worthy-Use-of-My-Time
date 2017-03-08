@@ -18,7 +18,7 @@ params = {
     'lang': 'en'
 }
 
-response = client.search('Cape Canaveral', **params)
+response = client.search(sys.argv[2], **params)
 
 for business in sorted(response.businesses):
     res.append([business.name,str(business.rating)])
